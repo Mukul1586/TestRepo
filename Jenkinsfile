@@ -1,10 +1,13 @@
 pipeline {
 
-    agent any 
+    agent none 
 
     stages {
-
-        stage('Build') { 
+        
+      
+ stage('Build') {
+     
+     agent { label 'slave' }
 
             steps {
 
@@ -15,6 +18,8 @@ pipeline {
         }
 
         stage('Test') { 
+            
+             agent { label 'slave' }
 
             steps {
 
@@ -25,6 +30,8 @@ pipeline {
         }
 
         stage('Deploy') { 
+            
+             agent { label 'slave' }
 
             steps {
 
