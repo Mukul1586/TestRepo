@@ -23,7 +23,7 @@ pipeline {
 
             steps {
 
-                bat "echo Test"
+                sh "echo Test"
 
             }
 
@@ -35,7 +35,7 @@ pipeline {
 
             steps {
 
-                bat "echo Deploy"
+               sh  "echo Deploy"
 
             }
 
